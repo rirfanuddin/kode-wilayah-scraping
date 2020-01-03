@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/kode_wilayah_scraping?useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+io:
+  github:
+    rirfanuddin:
+      scraping:
+        kodwil:
+          url: https://sig-dev.bps.go.id/restDropDown/getwilayah
+          sub-url: https://sig-dev.bps.go.id/restBridging/getwilayahperiode/level
+          kode-pos-url: https://sig-dev.bps.go.id/restBridgingPosController/getwilayah/level/desa/parent/
